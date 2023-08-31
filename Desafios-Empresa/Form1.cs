@@ -41,13 +41,13 @@ namespace Desafios_Empresa
         private void SaveArchive()
         {
             SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.FileName = "OrdenarNumeros.txt";
             saveFile.Filter = "(*.txt)|*.txt";
-            saveFile.Title = "OrdenarNumeros.txt";
-
-            if (saveFile.ShowDialog() == DialogResult.OK)
-            {
+         
+            MessageBox.Show(Environment.CurrentDirectory);
+            if(saveFile.ShowDialog() == DialogResult.OK) {
                 String filePath = saveFile.FileName;
-                using (StreamWriter sw = new StreamWriter(filePath))
+            using(StreamWriter sw = new StreamWriter(filePath))
                 {
                     foreach (object obj in lsValues)
                     {
@@ -56,11 +56,11 @@ namespace Desafios_Empresa
                         String value = string.Join("\n", obj);
                         sw.WriteLine(value);
                     }
+                    MessageBox.Show("Arquivo salvo com sucesso!");
                 }
             }
-
         }
-
+           
         private void button2_Click(object sender, EventArgs e)
         {
             SaveArchive();
