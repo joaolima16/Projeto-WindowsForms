@@ -9,10 +9,7 @@ namespace Desafios_Empresa
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,7 +38,7 @@ namespace Desafios_Empresa
         private void SaveArchive()
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = "OrdenarNumeros.txt";
+            saveFile.FileName = "Numeros_ordenar.txt";
             saveFile.Filter = "(*.txt)|*.txt";
          
             MessageBox.Show(Environment.CurrentDirectory);
@@ -55,6 +52,7 @@ namespace Desafios_Empresa
                         sortedValues.Sort();
                         String value = string.Join("\n", obj);
                         sw.WriteLine(value);
+                       
                     }
                     MessageBox.Show("Arquivo salvo com sucesso!");
                 }
