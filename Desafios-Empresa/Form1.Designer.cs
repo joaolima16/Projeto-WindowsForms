@@ -44,7 +44,6 @@
             label1.Size = new Size(299, 47);
             label1.TabIndex = 0;
             label1.Text = "Ordenar Numeros";
-            label1.Click += label1_Click;
             // 
             // txbValues
             // 

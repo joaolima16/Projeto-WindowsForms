@@ -33,7 +33,6 @@ namespace Desafios_Empresa
                 dgvData.DataSource = JsonConvert.DeserializeObject<List<Banco>>(restResponse.Content);
                 dgvData.Width = 600;
                 dgvData.AutoResizeColumns();
-                dgvData.AutoResizeRow();
 
             }
         }
