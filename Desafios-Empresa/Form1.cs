@@ -41,25 +41,25 @@ namespace Desafios_Empresa
         private void SaveArchive()
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = "OrdenarNumeros.txt";
-            saveFile.Filter = "(*.txt)|*.txt";
-         
-            MessageBox.Show(Environment.CurrentDirectory);
-            if(saveFile.ShowDialog() == DialogResult.OK) {
-                String filePath = saveFile.FileName;
-            using(StreamWriter sw = new StreamWriter(filePath))
-                {
-                    foreach (object obj in lsValues)
-                    {
-                        List<int> sortedValues = new List<int>(lsValues);
-                        sortedValues.Sort();
-                        String value = string.Join("\n", obj);
-                        sw.WriteLine(value);
-                    }
-                    MessageBox.Show("Arquivo salvo com sucesso!");
-                }
+            string pathExists = Path.Combine(Application.StartupPath, "Archives");
+            if (!Directory.Exists(pathExists))
+            {
+                Directory.CreateDirectory(pathExists);
             }
+            string path = Path.Combine(pathExists, "OrdenarNumeros.txt");
+
+
+            foreach (object obj in lsValues)
+            {
+                List<int> sortedValues = new List<int>(lsValues);
+                sortedValues.Sort();
+                List<string> lsSortedValues = sortedValues.ConvertAll(x => x.ToString());
+                File.WriteAllLines(path, lsSortedValues);
+            }
+            MessageBox.Show("Arquivo salvo com sucesso!");
+            
         }
+         
            
         private void button2_Click(object sender, EventArgs e)
         {
