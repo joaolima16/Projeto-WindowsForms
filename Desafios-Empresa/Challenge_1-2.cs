@@ -2,33 +2,26 @@ namespace Desafios_Empresa
 {
     public partial class Form1 : Form
     {
-        public List<int> lsValues = new List<int>();
-        public List<int> sortedValues = new List<int>();
+        private List<int> lsValues = new List<int>();
+        private List<int> sortedValues = new List<int>();
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (int.TryParse(txbValues.Text, out int lsValue))
             {
                 lsValues.Add(lsValue);
                 txbValues.Clear();
-                showValues();
+                ShowValues();
             }
             else
             {
                 MessageBox.Show("Digite um número inteiro válido.");
             }
         }
-        private void showValues()
+        private void ShowValues()
         {
             foreach (object o in lsValues)
             {
@@ -53,17 +46,25 @@ namespace Desafios_Empresa
             {
                 List<int> sortedValues = new List<int>(lsValues);
                 sortedValues.Sort();
-                List<string> lsSortedValues = sortedValues.ConvertAll(x => x.ToString());
-                File.WriteAllLines(path, lsSortedValues);
+                File.WriteAllLines(path, sortedValues.ConvertAll(x => x.ToString()));
             }
+
             MessageBox.Show("Arquivo salvo com sucesso!");
-            
+
         }
-         
-           
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void BtnGenerate_click(object sender, EventArgs e)
         {
             SaveArchive();
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm();
+            form.Show();
+            this.Visible = false;
         }
     }
 }

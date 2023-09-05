@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             dgvData = new DataGridView();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -46,17 +47,29 @@
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(27, 96);
+            dgvData.Location = new Point(28, 61);
             dgvData.Name = "dgvData";
             dgvData.RowTemplate.Height = 25;
             dgvData.Size = new Size(745, 333);
             dgvData.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBack.Location = new Point(693, 412);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(107, 39);
+            btnBack.TabIndex = 15;
+            btnBack.Text = "Voltar";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // FormBank
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(dgvData);
             Controls.Add(label1);
             Name = "FormBank";
@@ -71,5 +84,6 @@
 
         private Label label1;
         private DataGridView dgvData;
+        private Button btnBack;
     }
 }

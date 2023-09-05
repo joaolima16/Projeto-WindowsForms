@@ -41,6 +41,7 @@
             label6 = new Label();
             btnVerify = new Button();
             btnClear = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // label1
@@ -173,11 +174,23 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += txbClear_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBack.Location = new Point(473, 411);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(107, 39);
+            btnBack.TabIndex = 14;
+            btnBack.Text = "Voltar";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // CEP
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(581, 450);
+            Controls.Add(btnBack);
             Controls.Add(btnClear);
             Controls.Add(btnVerify);
             Controls.Add(txbRua);
@@ -212,5 +225,6 @@
         private TextBox txbRua;
         private Label label6;
         private Button btnClear;
+        private Button btnBack;
     }
 }

@@ -7,7 +7,7 @@ namespace Desafios_Empresa
         {
             InitializeComponent();
         }
-        private async void showDataAsync()
+        private async void ShowDataAsync()
         {
             using (var wbService = new ServiceReference1.AtendeClienteClient())
             {
@@ -21,7 +21,8 @@ namespace Desafios_Empresa
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
 
@@ -32,7 +33,7 @@ namespace Desafios_Empresa
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            showDataAsync();
+            ShowDataAsync();
         }
 
         private void txbCep_TextChanged(object sender, EventArgs e)
@@ -56,6 +57,13 @@ namespace Desafios_Empresa
             txbCidade.Text = "";
             txbUf.Text = "";
             txbRua.Text = "";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm();
+            form.Show();
+            this.Visible = false;
         }
     }
 }

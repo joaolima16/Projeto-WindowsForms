@@ -9,7 +9,7 @@ namespace Desafios_Empresa.Models
 {
     public class clJSON
     {
-        public string serializeJSON(clsTeste clsteste)
+        public static string SerializeJSON(List<clsTeste> clsteste)
         {
             return JsonSerializer.Serialize(clsteste);
         }

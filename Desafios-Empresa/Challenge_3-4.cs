@@ -15,21 +15,11 @@ namespace Desafios_Empresa
 {
     public partial class Challenge_3 : Form
     {
-        List<clsTeste> clList = new List<clsTeste>();
+        private List<clsTeste> clList = new List<clsTeste>();
         public Challenge_3()
         {
             InitializeComponent();
         }
-
-        private void Challenge_3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnJson(object sender, EventArgs e)
-        {
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             for (int i = 1; i <= 100; i++)
@@ -39,31 +29,23 @@ namespace Desafios_Empresa
             GenerateJSON();
 
         }
-        private async void GenerateJSON()
+        private void GenerateJSON()
         {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            string pathExists = Path.Combine(Application.StartupPath, "Archives");
+
             try
             {
-                SaveFileDialog svDialog = new SaveFileDialog();
-                svDialog.FileName = "data.json";
-                svDialog.Filter = "(*.json)|*.json";
-                if (svDialog.ShowDialog() == DialogResult.OK)
+                if (!Directory.Exists(pathExists))
                 {
-                    using (StreamWriter sw = new StreamWriter(svDialog.FileName))
-                    {
-                        foreach (object obj in clList)
-                        {
-
-                            string json = JsonConvert.SerializeObject(obj);
-                            sw.WriteLine(json);
-
-                        }
-                    }
-                    MessageBox.Show("Arquivo salvo");
-                    showInformationsGridView();
+                    Directory.CreateDirectory(pathExists);
                 }
-
-
+                string path = Path.Combine(pathExists, "data.json");
+                File.WriteAllText(path, clJSON.SerializeJSON(clList), Encoding.UTF8);
+                MessageBox.Show("Arquivo salvo");
+                showInformationsGridView();
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -73,7 +55,13 @@ namespace Desafios_Empresa
         {
             dataGridJson.DataSource = clList;
             dataGridJson.Width = 280;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm();
+            form.Show();
+            this.Visible = false;
         }
     }
 }

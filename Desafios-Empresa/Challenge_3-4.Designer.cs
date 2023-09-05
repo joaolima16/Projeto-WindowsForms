@@ -31,6 +31,7 @@
             label1 = new Label();
             button1 = new Button();
             dataGridJson = new DataGridView();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridJson).BeginInit();
             SuspendLayout();
             // 
@@ -58,23 +59,34 @@
             // dataGridJson
             // 
             dataGridJson.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridJson.Location = new Point(64, 132);
+            dataGridJson.Location = new Point(204, 132);
             dataGridJson.Name = "dataGridJson";
             dataGridJson.RowTemplate.Height = 25;
-            dataGridJson.Size = new Size(642, 285);
+            dataGridJson.Size = new Size(392, 285);
             dataGridJson.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(0, 418);
+            button2.Name = "button2";
+            button2.Size = new Size(122, 32);
+            button2.TabIndex = 3;
+            button2.Text = "Voltar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Challenge_3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(815, 450);
+            Controls.Add(button2);
             Controls.Add(dataGridJson);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Challenge_3";
             Text = "Challenge_3";
-            Load += Challenge_3_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridJson).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -85,5 +97,6 @@
         private Label label1;
         private Button button1;
         private DataGridView dataGridJson;
+        private Button button2;
     }
 }

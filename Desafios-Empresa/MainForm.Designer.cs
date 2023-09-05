@@ -31,13 +31,15 @@
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
+            button4 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Comic Sans MS", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(163, 28);
+            label1.Location = new Point(190, 20);
             label1.Name = "label1";
             label1.Size = new Size(283, 45);
             label1.TabIndex = 0;
@@ -46,9 +48,9 @@
             // button1
             // 
             button1.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(144, 147);
+            button1.Location = new Point(33, 147);
             button1.Name = "button1";
-            button1.Size = new Size(145, 33);
+            button1.Size = new Size(145, 75);
             button1.TabIndex = 1;
             button1.Text = "Desafio - 1/2";
             button1.UseVisualStyleBackColor = true;
@@ -57,24 +59,48 @@
             // button2
             // 
             button2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(359, 147);
+            button2.Location = new Point(228, 147);
             button2.Name = "button2";
-            button2.Size = new Size(145, 33);
+            button2.Size = new Size(145, 75);
             button2.TabIndex = 2;
-            button2.Text = "Desafio - 3";
+            button2.Text = "Desafio - 3/4/5";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.Location = new Point(426, 147);
+            button4.Name = "button4";
+            button4.Size = new Size(145, 75);
+            button4.TabIndex = 4;
+            button4.Text = "Desafio - 6";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(33, 268);
+            button3.Name = "button3";
+            button3.Size = new Size(145, 75);
+            button3.TabIndex = 5;
+            button3.Text = "Desafio - 7";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(638, 378);
+            Controls.Add(button3);
+            Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "Menu";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -84,5 +110,7 @@
         private Label label1;
         private Button button1;
         private Button button2;
+        private Button button4;
+        private Button button3;
     }
 }
