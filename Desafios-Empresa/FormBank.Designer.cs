@@ -73,7 +73,7 @@
             Controls.Add(dgvData);
             Controls.Add(label1);
             Name = "FormBank";
-            Text = "FormBank";
+            Text = "Desafio - 7";
             Load += FormBank_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
             ResumeLayout(false);

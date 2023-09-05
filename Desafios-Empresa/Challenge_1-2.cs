@@ -3,7 +3,7 @@ namespace Desafios_Empresa
     public partial class Form1 : Form
     {
         private List<int> lsValues = new List<int>();
-        private List<int> sortedValues = new List<int>();
+        private readonly List<int> sortedValues = new List<int>();
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Desafios_Empresa
                 List<int> sortedValues = new List<int>(lsValues);
                 sortedValues.Sort();
                 String result = string.Join(", ", sortedValues);
-                lbValues.Text = result;
+                txbResult.Text = result;
             }
         }
         private void SaveArchive()

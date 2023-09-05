@@ -205,7 +205,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CEP";
-            Text = "CEP";
+            Text = "Desafio - 6";
             ResumeLayout(false);
             PerformLayout();
         }

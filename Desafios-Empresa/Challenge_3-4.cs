@@ -48,13 +48,17 @@ namespace Desafios_Empresa
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erro ao salvar o arquivo:" + ex.Message);
             }
         }
         private void showInformationsGridView()
         {
-            dataGridJson.DataSource = clList;
-            dataGridJson.Width = 280;
+            if (dataGridJson != null)
+            {
+                dataGridJson.DataSource = clList;
+                dataGridJson.Width = 280;
+            }
+          
         }
 
         private void button2_Click(object sender, EventArgs e)

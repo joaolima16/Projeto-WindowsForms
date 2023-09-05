@@ -33,6 +33,7 @@
             button2 = new Button();
             button4 = new Button();
             button3 = new Button();
+            button5 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -89,11 +90,23 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click_1;
             // 
+            // button5
+            // 
+            button5.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.Location = new Point(228, 268);
+            button5.Name = "button5";
+            button5.Size = new Size(145, 75);
+            button5.TabIndex = 6;
+            button5.Text = "Desafio - 8";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(638, 378);
+            Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);
@@ -112,5 +125,6 @@
         private Button button2;
         private Button button4;
         private Button button3;
+        private Button button5;
     }
 }

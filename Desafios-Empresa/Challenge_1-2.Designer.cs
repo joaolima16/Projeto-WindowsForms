@@ -34,6 +34,7 @@
             lbValues = new Label();
             btnGenerate = new Button();
             button2 = new Button();
+            txbResult = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -57,7 +58,7 @@
             // button1
             // 
             button1.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(432, 145);
+            button1.Location = new Point(411, 145);
             button1.Name = "button1";
             button1.Size = new Size(106, 28);
             button1.TabIndex = 2;
@@ -67,17 +68,15 @@
             // 
             // lbValues
             // 
-            lbValues.AutoSize = true;
-            lbValues.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lbValues.Location = new Point(252, 176);
+            lbValues.Location = new Point(0, 0);
             lbValues.Name = "lbValues";
-            lbValues.Size = new Size(0, 30);
-            lbValues.TabIndex = 3;
+            lbValues.Size = new Size(100, 23);
+            lbValues.TabIndex = 6;
             // 
             // btnGenerate
             // 
             btnGenerate.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGenerate.Location = new Point(177, 193);
+            btnGenerate.Location = new Point(180, 334);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(176, 40);
             btnGenerate.TabIndex = 4;
@@ -96,11 +95,21 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // txbResult
+            // 
+            txbResult.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txbResult.Location = new Point(120, 198);
+            txbResult.Multiline = true;
+            txbResult.Name = "txbResult";
+            txbResult.Size = new Size(315, 130);
+            txbResult.TabIndex = 7;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 450);
+            Controls.Add(txbResult);
             Controls.Add(button2);
             Controls.Add(btnGenerate);
             Controls.Add(lbValues);
@@ -121,5 +130,6 @@
         private Label lbValues;
         private Button btnGenerate;
         private Button button2;
+        private TextBox txbResult;
     }
 }
