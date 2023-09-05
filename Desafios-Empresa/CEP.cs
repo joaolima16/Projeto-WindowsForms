@@ -27,7 +27,6 @@ namespace Desafios_Empresa
             }
 
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             ShowDataAsync();
@@ -45,8 +44,6 @@ namespace Desafios_Empresa
                 btnVerify.Enabled = false;
             }
         }
-
-
         private void txbClear_Click(object sender, EventArgs e)
         {
             txbCep.Text = "";

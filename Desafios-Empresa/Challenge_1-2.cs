@@ -3,7 +3,6 @@ namespace Desafios_Empresa
     public partial class Form1 : Form
     {
         private List<int> lsValues = new List<int>();
-        private readonly List<int> sortedValues = new List<int>();
         public Form1()
         {
             InitializeComponent();
@@ -40,17 +39,13 @@ namespace Desafios_Empresa
                 Directory.CreateDirectory(pathExists);
             }
             string path = Path.Combine(pathExists, "OrdenarNumeros.txt");
-
-
             foreach (object obj in lsValues)
             {
                 List<int> sortedValues = new List<int>(lsValues);
                 sortedValues.Sort();
                 File.WriteAllLines(path, sortedValues.ConvertAll(x => x.ToString()));
             }
-
             MessageBox.Show("Arquivo salvo com sucesso!");
-
         }
 
         private void BtnGenerate_click(object sender, EventArgs e)
