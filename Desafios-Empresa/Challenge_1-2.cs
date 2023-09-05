@@ -53,7 +53,6 @@ namespace Desafios_Empresa
 
         }
 
-
         private void BtnGenerate_click(object sender, EventArgs e)
         {
             SaveArchive();
