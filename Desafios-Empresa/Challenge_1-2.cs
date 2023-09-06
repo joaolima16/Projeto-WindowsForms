@@ -1,7 +1,10 @@
+using Desafios_Empresa.Controllers;
+
 namespace Desafios_Empresa
 {
     public partial class Form1 : Form
     {
+        Challenge_1_2Controller challenge = new();
         private List<int> lsValues = new List<int>();
         public Form1()
         {
@@ -30,30 +33,10 @@ namespace Desafios_Empresa
                 txbResult.Text = result;
             }
         }
-        private void SaveArchive()
-        {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            string pathExists = Path.Combine(Application.StartupPath, "Archives");
-            if (!Directory.Exists(pathExists))
-            {
-                Directory.CreateDirectory(pathExists);
-            }
-            string path = Path.Combine(pathExists, "OrdenarNumeros.txt");
-            foreach (object obj in lsValues)
-            {
-                List<int> sortedValues = new List<int>(lsValues);
-                sortedValues.Sort();
-                File.WriteAllLines(path, sortedValues.ConvertAll(x => x.ToString()));
-            }
-            MessageBox.Show("Arquivo salvo com sucesso!");
-        }
-
         private void BtnGenerate_click(object sender, EventArgs e)
         {
-            SaveArchive();
+            challenge.SaveArchive(lsValues);
         }
-
-
         private void Button2_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();

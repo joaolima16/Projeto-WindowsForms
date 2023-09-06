@@ -1,19 +1,20 @@
 ﻿
+using Desafios_Empresa.Controllers;
+
 namespace Desafios_Empresa
 {
     public partial class CEP : Form
     {
+        Challenge_6Controller challenge_6 = new();
         public CEP()
         {
             InitializeComponent();
         }
-        private async void ShowDataAsync()
-        {
-            using (var wbService = new ServiceReference1.AtendeClienteClient())
-            {
+        private async void ShowDataValues()
+        { 
                 try
                 {
-                    var result = await wbService.consultaCEPAsync(txbCep.Text);
+                    var result = await challenge_6.ShowDataAsync(txbCep.Text);
                     txbBairro.Text = result.@return.bairro;
                     txbCidade.Text = result.@return.cidade;
                     txbUf.Text = result.@return.uf;
@@ -23,13 +24,12 @@ namespace Desafios_Empresa
                 {
                     MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
+  
             }
-
         }
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            ShowDataAsync();
+            ShowDataValues();
         }
 
         private void TxbCep_TextChanged(object sender, EventArgs e)

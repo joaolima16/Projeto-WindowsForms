@@ -1,4 +1,5 @@
-﻿using Desafios_Empresa.Models;
+﻿using Desafios_Empresa.Controllers;
+using Desafios_Empresa.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ using System.Windows.Forms;
 namespace Desafios_Empresa
 {
     public partial class Challenge_3 : Form
+
     {
+        Challenge_3_4Controller challenge_3_ = new();
         private List<clsTeste> clList = new List<clsTeste>();
         public Challenge_3()
         {
@@ -22,35 +25,11 @@ namespace Desafios_Empresa
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 100; i++)
-            {
-                clList.Add(new clsTeste(i, DateTime.Now));
-            }
-            GenerateJSON();
-
+            clList = challenge_3_.GenerateValues();
+            challenge_3_.GenerateJSON(clList);
+            ShowInformationsGridView();
         }
-        private void GenerateJSON()
-        {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            string pathExists = Path.Combine(Application.StartupPath, "Archives");
 
-            try
-            {
-                if (!Directory.Exists(pathExists))
-                {
-                    Directory.CreateDirectory(pathExists);
-                }
-                string path = Path.Combine(pathExists, "data.json");
-                File.WriteAllText(path, clJSON.SerializeJSON(clList), Encoding.UTF8);
-                MessageBox.Show("Arquivo salvo");
-                ShowInformationsGridView();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar o arquivo:" + ex.Message);
-            }
-        }
         private void ShowInformationsGridView()
         {
             if (dataGridJson != null)
@@ -60,7 +39,6 @@ namespace Desafios_Empresa
             }
           
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();
