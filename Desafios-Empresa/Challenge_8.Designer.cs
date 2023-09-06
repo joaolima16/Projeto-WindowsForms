@@ -43,7 +43,7 @@
             button1.TabIndex = 0;
             button1.Text = "Baixar Imagem";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Button1_Click;
             // 
             // label1
             // 
@@ -72,7 +72,7 @@
             button2.TabIndex = 4;
             button2.Text = "Voltar";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += Button2_Click;
             // 
             // Challenge_8
             // 

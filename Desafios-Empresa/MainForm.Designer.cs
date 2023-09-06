@@ -55,7 +55,7 @@
             button1.TabIndex = 1;
             button1.Text = "Desafio - 1/2";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Button1_Click;
             // 
             // button2
             // 
@@ -66,7 +66,7 @@
             button2.TabIndex = 2;
             button2.Text = "Desafio - 3/4/5";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += Button2_Click;
             // 
             // button4
             // 
@@ -77,7 +77,7 @@
             button4.TabIndex = 4;
             button4.Text = "Desafio - 6";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            button4.Click += Button4_Click;
             // 
             // button3
             // 
@@ -88,7 +88,7 @@
             button3.TabIndex = 5;
             button3.Text = "Desafio - 7";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click_1;
+            button3.Click += Button3_Click_1;
             // 
             // button5
             // 

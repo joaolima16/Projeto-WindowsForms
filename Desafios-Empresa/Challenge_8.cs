@@ -20,7 +20,7 @@ namespace Desafios_Empresa
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             DownloadImage("https://redeservice.com.br/wp-content/uploads/2020/07/redeservice-logo.png");
         }
@@ -70,7 +70,7 @@ namespace Desafios_Empresa
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();

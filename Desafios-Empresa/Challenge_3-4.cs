@@ -43,7 +43,7 @@ namespace Desafios_Empresa
                 string path = Path.Combine(pathExists, "data.json");
                 File.WriteAllText(path, clJSON.SerializeJSON(clList), Encoding.UTF8);
                 MessageBox.Show("Arquivo salvo");
-                showInformationsGridView();
+                ShowInformationsGridView();
             }
 
             catch (Exception ex)
@@ -51,7 +51,7 @@ namespace Desafios_Empresa
                 MessageBox.Show("Erro ao salvar o arquivo:" + ex.Message);
             }
         }
-        private void showInformationsGridView()
+        private void ShowInformationsGridView()
         {
             if (dataGridJson != null)
             {
@@ -61,7 +61,7 @@ namespace Desafios_Empresa
           
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();
             form.Show();

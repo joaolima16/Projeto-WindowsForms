@@ -17,27 +17,27 @@ namespace Desafios_Empresa
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
             this.Visible = false;
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Challenge_3 clForm = new Challenge_3();
             clForm.Show();
             this.Visible = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             CEP formCep = new CEP();
             formCep.Show();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void Button3_Click_1(object sender, EventArgs e)
         {
             FormBank form = new FormBank();
             form.Show();

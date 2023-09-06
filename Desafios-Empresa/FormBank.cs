@@ -28,7 +28,7 @@ namespace Desafios_Empresa
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();
             form.Show();

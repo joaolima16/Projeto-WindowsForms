@@ -62,7 +62,7 @@
             btnBack.TabIndex = 15;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            btnBack.Click += BtnBack_Click;
             // 
             // FormBank
             // 

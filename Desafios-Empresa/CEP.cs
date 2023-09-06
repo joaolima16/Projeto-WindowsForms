@@ -27,12 +27,12 @@ namespace Desafios_Empresa
             }
 
         }
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             ShowDataAsync();
         }
 
-        private void txbCep_TextChanged(object sender, EventArgs e)
+        private void TxbCep_TextChanged(object sender, EventArgs e)
         {
             if (txbCep.TextLength >= 8)
             {
@@ -44,7 +44,7 @@ namespace Desafios_Empresa
                 btnVerify.Enabled = false;
             }
         }
-        private void txbClear_Click(object sender, EventArgs e)
+        private void TxbClear_Click(object sender, EventArgs e)
         {
             txbCep.Text = "";
             txbBairro.Text = "";
@@ -53,7 +53,7 @@ namespace Desafios_Empresa
             txbRua.Text = "";
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();
             form.Show();

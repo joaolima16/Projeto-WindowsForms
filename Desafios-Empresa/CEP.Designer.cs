@@ -72,7 +72,7 @@
             txbCep.Name = "txbCep";
             txbCep.Size = new Size(299, 35);
             txbCep.TabIndex = 3;
-            txbCep.TextChanged += txbCep_TextChanged;
+            txbCep.TextChanged += TxbCep_TextChanged;
             // 
             // txbUf
             // 
@@ -160,7 +160,7 @@
             btnVerify.TabIndex = 12;
             btnVerify.Text = "Consultar";
             btnVerify.UseVisualStyleBackColor = true;
-            btnVerify.Click += button1_Click_1;
+            btnVerify.Click += Button1_Click_1;
             // 
             // btnClear
             // 
@@ -172,7 +172,7 @@
             btnClear.TabIndex = 13;
             btnClear.Text = "Limpar";
             btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += txbClear_Click;
+            btnClear.Click += TxbClear_Click;
             // 
             // btnBack
             // 
@@ -183,7 +183,7 @@
             btnBack.TabIndex = 14;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            btnBack.Click += BtnBack_Click;
             // 
             // CEP
             // 

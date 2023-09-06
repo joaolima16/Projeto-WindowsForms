@@ -7,7 +7,7 @@ namespace Desafios_Empresa
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txbValues.Text, out int lsValue))
             {
@@ -54,7 +54,7 @@ namespace Desafios_Empresa
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             MainForm form = new MainForm();
             form.Show();
